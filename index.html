@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="menu" id="menu">
+        <input type="checkbox" id="toggle">
+        <label for="toggle" id="show-menu">
+            <div class="btn">
+                <span class="material-symbols-outlined menuBtn">
+                    menu
+                </span>
+                <span class="material-symbols-outlined closeBtn">
+                    close
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    photo_camera
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    photo
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    music_note
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    settings
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    phone
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    cloud
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    videocam
+                </span>
+            </div>
+            <div class="btn">
+                <span class="material-symbols-outlined closeBtn">
+                    Home
+                </span>
+            </div>
+        </label>
+    </div>
+</body>
+<script src="node_modules/draggable/dist/draggable.min.js"></script>
+<script>
+
+
+    // const menuBtn = document.querySelector('.menuBtn');
+    // const closeBtn = document.querySelector('.closeBtn');
+    // const toggleCheckbox = document.getElementById('toggle');
+
+    // // Function to check the checkbox when the menu button is clicked
+    // menuBtn.addEventListener('click', function () {
+    //     toggleCheckbox.checked = false;
+    // });
+
+    // // Function to uncheck the checkbox when the close button is clicked
+    // closeBtn.addEventListener('click', function () {
+    //     toggleCheckbox.checked = true;
+    // });
+    let element = document.getElementById('menu');
+    let options = {
+        grid: 10,
+        onDrag: function () { },
+    };
+    new Draggable(element, options);
+</script>
+
+</html>
