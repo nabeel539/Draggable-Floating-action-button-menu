@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background: #fdfdfd;
+}
+input{
+    position: absolute;
+    display: none;
+}
+
+.menu{
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    background: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  5px 5px 18px #c3c3c3,
+                 -5px -5px 18px #fdfdfd;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.material-symbols-outlined{
+    font-size: 25px;
+    color: black;
+}
+
+.btn:not(:first-child){
+    opacity: 0;
+    z-index: -2;
+    transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:nth-child(2){
+    top: 0px;
+    transition-delay: 0s;
+}
+.btn:nth-child(3){
+    left: 0px;
+    transition-delay: 0.1s;
+}
+.btn:nth-child(4){
+    left: 0px;
+    transition-delay: 0.2s;
+}
+.btn:nth-child(5){
+    top: 0px;
+    left: 0px;
+    transition-delay: 0.3s;
+}
+.btn:nth-child(6){
+    top: 0px;
+    transition-delay: 0.4s;
+}
+.btn:nth-child(7){
+    top: 0px;
+    transition-delay: 0.5s;
+}
+.btn:nth-child(8){
+    top: 0px;
+    transition-delay: 0.6s;
+}
+.btn:nth-child(9){
+    top: 0px;
+    transition-delay: 0.7s;
+}
+
+.closeBtn, .menuBtn{
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.closeBtn{
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(2) {
+    top: -150px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(3) {
+    top: -100px;
+    left: 100px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(4) {
+    left: 150px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(5) {
+    left: 100px;
+    top: 100px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(6) {
+    top: 150px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(7) {
+    left: -100px;
+    top: 100px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(8) {
+    left: -150px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(9) {
+    left: -100px;
+    top: -100px;
+    opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn .menuBtn {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+input#toggle:checked ~ #show-menu .btn .closeBtn {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+input#toggle:not(:checked) ~ #show-menu .btn {
+    top: 0;
+    left: 0;
+    transition-delay: 0.1s; 
+  }
